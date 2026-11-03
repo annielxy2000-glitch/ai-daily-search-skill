@@ -1,6 +1,6 @@
 # ai-daily-search
 
-An agent skill for searching **「AI前沿动态追踪」 (AI Frontier Daily)** — a daily digest of AI industry events published by ZGCA AI战略研究所 at <https://ai-daily.ihainan.me>, from 2026-09-11 onward. Your agent can look up what happened with an AI company, lab, person or field (model launches, research, funding and IPOs, policy, named people's views) and answer with dated, sourced, structured output.
+An agent skill for searching **「AI前沿动态追踪」 (AI Frontier Daily)** — a daily digest of AI industry events published by A at <https://ai-daily.ihainan.me>, from 2026-09-11 onward. Your agent can look up what happened with an AI company, lab, person or field (model launches, research, funding and IPOs, policy, named people's views) and answer with dated, sourced, structured output.
 
 让你的 Agent 检索「AI前沿动态追踪」日报知识库：按关键词、日期、标签、类型、人物查 AI 公司、人物和领域的动态，输出带日期和出处的简报、时间线、分类事件清单。
 
