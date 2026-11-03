@@ -3,6 +3,7 @@
 
   python3 search.py search "Anthropic 融资" --days 30
   python3 search.py search --tag 具身智能 --kind 事件 --from 2026-10-01 --all
+  python3 search.py search --tag AI安全与对齐 --days 14 --all --brief
   python3 search.py item 2026-10-31/s01
   python3 search.py meta
 
@@ -85,7 +86,10 @@ def do_search(a):
         print(f"# showing {len(items)}; more with --offset {nxt}" + ("" if a.all else " or --all"))
     print()
     for it in items:
-        print_item(it)
+        if a.brief:
+            print(f"{it['date']}  {it['id']:<16} {it['kind_label']}  {it['title']}")
+        else:
+            print_item(it)
 
 
 def print_item(it):
@@ -153,6 +157,7 @@ def main():
     s.add_argument("--all", action="store_true", help="follow pages up to --max results")
     s.add_argument("--max", type=int, default=200)
     s.add_argument("--full", action="store_true", help="full bodies instead of snippets")
+    s.add_argument("--brief", action="store_true", help="one line per item: date, id, kind, title")
     s.add_argument("--json", action="store_true")
     s.set_defaults(fn=do_search)
     i = sub.add_parser("item", help="full text of items by id (DATE/KEY)")
